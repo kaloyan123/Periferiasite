@@ -1,0 +1,52 @@
+﻿@model List<TreadDTO>
+
+<div class="pagespace">
+
+    <h4 style="text-align: center;">Основен форум за дискусии</h4>
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        <a asp-area="" asp-controller="Treads" asp-action="Create">
+            <button type="button" class="btn btn-success">Започни нов разговор</button>
+        </a>
+    }
+    <div style="margin-top: 10px;">
+        <table style="width:100%" class="tablitsa">
+            <thead>
+                <tr>
+                    <th style="width: 15%;" class="tablitsaslot">Започнато от</th>
+                    <th style="width: 60%;" class="tablitsaslot">Обсъждане</th>
+                    <th style="width: 15%;" class="tablitsaslot">Тема</th>
+                    <th style="width: 10%;" class="tablitsacenterslot" scope="col">Отговори</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var tread in Model)
+                {
+                    <tr class="sd">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <td style="width: 15%;" class="tablitsaslot">@tread.CreatedBy</td>
+                            <td style="width: 60%;" class="tablitsaslot">
+                                <a asp-area="" asp-controller="Treads" asp-action="Preview" asp-route-id="@tread.Id">@tread.Name</a>
+                            </td>
+                            <td style="width: 15%;" class="tablitsaslot">@tread.Topic</td>
+                            <td style="width: 10%;" class="tablitsacenterslot">@tread.ReplyesNumber</td>
+                        }
+                        else
+                        {
+                            <td style="width: 15%;" class="tablitsaslot">@tread.CreatedBy</td>
+                            <td style="width: 60%;" class="tablitsaslot">@tread.Name</td>
+                            <td style="width: 15%;" class="tablitsaslot">@tread.Topic</td>
+                            <td style="width: 10%;" class="tablitsacenterslot">@tread.ReplyesNumber</td>
+                        }
+
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>

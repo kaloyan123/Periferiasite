@@ -1,0 +1,81 @@
+﻿body {
+    background-color: black;
+}
+
+.center {
+    border: 2px solid black;
+    padding: 0px;
+}
+
+.imgdisplay {
+    display: flex;
+}
+
+.imgcolumn {
+    flex: 33.33%;
+    padding: 30px;
+}
+
+.centerimg {
+    width: 100%
+}
+
+.centertxt {
+    text-align: center;
+}
+
+.buttoncolumn {
+    flex: 33.33%;
+}
+
+.periferenA {
+    padding: 5px 10px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+
+    border: 1px solid black;
+}
+.periferenA:hover {
+    color: black;
+    background-color: #dfeced;
+    text-align: center;
+    text-decoration: none;
+}
+.periferenA:visited  {
+    color: black;
+    background-color: #dfeced;
+    text-align: center;
+    text-decoration: none;
+}
+
+.buttonnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    border-bottom: 1px groove black;
+}
+
+.buttonnavbutn {
+    display: inline;
+   // margin-right: 11px;
+    flex: 33.33%;
+}
+/*
+.buttonnavbutnext {
+    display: inline;
+    margin-right: 13px;
+    // flex: 25%;
+}
+    <li class=" ">
+        <a class="periferenA" type="button" asp-area="" asp-controller="Periferia" asp-action="Zapomniashtilist">
+            Запомнящи периферни устроиства
+        </a>
+    </li>
+
+
+            <option value="zapomniashti">Запомниящо</option>
+    */

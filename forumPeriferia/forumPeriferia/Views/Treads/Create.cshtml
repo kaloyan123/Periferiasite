@@ -1,0 +1,36 @@
+﻿@model List<PerifernaChast>
+
+<div class="pagespace">
+
+    <h1>започни нов разговор</h1>
+
+    <form asp-action="Add">
+
+        <div class="form-group">
+            <label>Какво е заглавието?</label>
+            <input type="text" class="form-control" placeholder="Enter Content" name="Name">
+        </div>
+
+        <select class="form-outline custom-select form-white mb-4" aria-label="Default select example" name="Topic">
+
+            <option selected value=""> Каква е темата на разговора? </option>
+            @foreach (var chast in Model)
+            {
+                <option value="@chast.Name">@chast.Name</option>
+            }
+
+        </select>
+
+        <div class="form-group">
+            <label>Пишете всичко което ви интересува тук:</label>
+            <textarea type="text" class="form-control" placeholder="Enter Content" name="Content" rows="15" cols="50"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Добави</button>
+
+        <a asp-area="" asp-controller="Treads" asp-action="TreadsAll">
+            <button type="button" class="btn btn-secondary">Назад</button>
+        </a>
+
+    </form>
+</div>

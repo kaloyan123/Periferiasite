@@ -1,0 +1,71 @@
+﻿@model PerifernaChast
+
+<div class="pagespace">
+
+    <div>
+        <h1>@Model.Name</h1>
+    </div>
+
+    @if (User.Identity.Name == "kaloyan.kirchev@gmail.com")
+    {
+        <div>
+            <a asp-area="" asp-controller="Periferia" asp-action="EditPeriferia" asp-route-id="@Model.Id">
+                <button type="button" class="btn btn-warning">Промени</button>
+            </a>
+            <a asp-area="" asp-controller="Periferia" asp-action="Delete" asp-route-id="@Model.Id">
+                <button type="button" class="btn btn-danger">Истрии</button>
+            </a>
+        </div>
+    }
+
+    <div>
+        <h5>История</h5>
+
+        <p class="spasing">@Model.Istoria</p>
+    </div>
+
+    <div>
+        <h5>Класификация</h5>
+        <p class="spasing">@Model.Klasificatsia</p>
+    </div>
+
+    <div>
+        <h5>Устройство</h5>
+        <p class="spasing">@Model.Ustroistvo</p>
+    </div>
+
+    <div>
+        <h5>Процес на деиствие</h5>
+        <p class="spasing">@Model.ProcesNaDeisvie</p>
+    </div>
+
+    <a asp-area="" asp-controller="Treads" asp-action="TreadsPerifaira" asp-route-type="@Model.Name">
+        <button type="button" class="btn btn-primary">Не намери това което търсиш?</button>
+    </a>
+
+    @if (@Model.Type == "vhodni")
+    {
+        <a asp-area="" asp-controller="Periferia" asp-action="Vhodnilist">
+            <button type="button" class="btn btn-secondary">Назад</button>
+        </a>
+    }
+    @if (@Model.Type == "ishodni")
+    {
+        <a asp-area="" asp-controller="Periferia" asp-action="Ishodnilist">
+            <button type="button" class="btn btn-secondary">Назад</button>
+        </a>
+    }
+    @if (@Model.Type == "vhodnoishodni")
+    {
+        <a asp-area="" asp-controller="Periferia" asp-action="Vhodnoishodnilist">
+            <button type="button" class="btn btn-secondary">Назад</button>
+        </a>
+    }
+    @if (@Model.Type == "zapomniashti")
+    {
+        <a asp-area="" asp-controller="Periferia" asp-action="Zapomniashtilist">
+            <button type="button" class="btn btn-secondary">Назад</button>
+        </a>
+    }
+
+</div>

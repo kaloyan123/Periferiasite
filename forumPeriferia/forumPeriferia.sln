@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33423.256
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "forumPeriferia", "forumPeriferia\forumPeriferia.csproj", "{6AFBE27C-E14B-4556-B0A2-B5E1E611B5A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6AFBE27C-E14B-4556-B0A2-B5E1E611B5A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AFBE27C-E14B-4556-B0A2-B5E1E611B5A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AFBE27C-E14B-4556-B0A2-B5E1E611B5A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AFBE27C-E14B-4556-B0A2-B5E1E611B5A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EED5300D-E2D0-4399-8A77-F57D826BE503}
+	EndGlobalSection
+EndGlobal

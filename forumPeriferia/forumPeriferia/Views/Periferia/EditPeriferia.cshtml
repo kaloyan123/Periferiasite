@@ -1,0 +1,44 @@
+﻿@model PerifernaChast
+
+<div class="pagespace">
+
+    <h1>Промени периферия</h1>
+
+    <form asp-action="Edit">
+
+        <div class="hidden">
+            <input type="text" class="form-control" placeholder="Enter Content" name="Id" value="@Model.Id">
+        </div>
+
+        <div class="form-group">
+            <label>Име</label>
+            <input type="text" class="form-control" placeholder="Enter Content" name="Name" value="@Model.Name">
+        </div>
+
+        <div class="form-group">
+            <label>История</label>
+            <textarea type="text" class="form-control" placeholder="Enter Content" name="Istoria" rows="15" cols="50">@Model.Istoria</textarea>
+        </div>
+        <div class="form-group">
+            <label>Класификация</label>
+            <textarea type="text" class="form-control" placeholder="Enter Content" name="Klasificatsia" rows="15" cols="50">@Model.Klasificatsia</textarea>
+        </div>
+        <div class="form-group">
+            <label>Устройство</label>
+            <textarea type="text" class="form-control" placeholder="Enter Content" name="Ustroistvo" rows="15" cols="50">@Model.Ustroistvo</textarea>
+        </div>
+        <div class="form-group">
+            <label>Процес на деиствие</label>
+            <textarea type="text" class="form-control" placeholder="Enter Content" name="ProcesNaDeisvie" rows="15" cols="50">@Model.ProcesNaDeisvie</textarea>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Промени</button>
+
+
+        <a asp-area="" asp-controller="Home" asp-action="Index">
+            <button type="button" class="btn btn-secondary">Назад</button>
+        </a>
+
+    </form>
+</div>

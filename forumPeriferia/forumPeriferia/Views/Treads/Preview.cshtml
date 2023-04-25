@@ -1,0 +1,83 @@
+﻿@model TreadDTO
+
+<div class="pagespace">
+    <div class="treadwrapper">
+
+        <div class="namesaparator">
+            <h3 class="squishedtext">@Model.Name</h3>
+            <p class="squishedtext">@Model.Topic</p>
+        </div>
+
+        <div class="contentwrapper">
+            <p class="spasedtext">@Model.Content</p>
+        </div>
+
+        @if (User.Identity.Name == @Model.UserEmail)
+        {
+            <a asp-action="Edit" asp-route-id="@Model.Id">
+                <button type="button" class="btn btn-warning">Промени</button>
+            </a>
+            <a asp-action="Delete" asp-route-id="@Model.Id">
+                <button type="button" class="btn btn-danger">Истрии</button>
+            </a>
+        }
+    </div>
+    
+    <div class="allcommentwrapper">
+        <div>
+            @if (@Model.ReplyesNumber == 1)
+            {
+                <h6 class="squishedtext">@Model.ReplyesNumber Отговор</h6>
+            }
+            else if (@Model.ReplyesNumber == 0)
+            {
+                <h6 class="squishedtext">Тази дискусия няма отговори</h6>
+            }
+            else
+            {
+                <h6 class="squishedtext">@Model.ReplyesNumber Отговора</h6>
+            }
+
+        </div>
+
+        @foreach (var comment in Model.Comments)
+        {
+            <div class="commentwrapper">
+
+                <div class="namesaparator">
+                    <h4>@comment.CreatedBy</h4>
+                </div>
+
+                <p class="spasedtext">@comment.Content</p>
+
+                @if (User.Identity.Name == @comment.CreatedByEmail)
+                {
+
+                    <a asp-action="EditC" asp-route-id="@comment.Id">
+                        <button type="button" class="btn btn-warning">Промени</button>
+                    </a>
+                    <a asp-action="DeleteComment" asp-route-comid="@comment.Id">
+                        <button type="button" class="btn btn-danger">Истрии</button>
+                    </a>
+
+                }
+            </div>
+        }
+        
+
+        <form asp-area="" asp-controller="Treads" asp-action="CreateComment" asp-route-trid="@Model.Id">
+            <div>
+                <p class="squishedtext" style="margin-top: 10px;">Твоя отговор:</p>
+            </div>
+
+            <textarea type="text" class="form-control" placeholder="Enter Content" name="Content" rows="5" cols="50"></textarea>
+
+            <button type="submit" class="btn btn-primary">Отговори</button>
+        </form>
+
+    </div>
+
+    <a asp-action="TreadsAll">
+        <button type="button" class="btn btn-secondary">Назад</button>
+    </a>
+</div>

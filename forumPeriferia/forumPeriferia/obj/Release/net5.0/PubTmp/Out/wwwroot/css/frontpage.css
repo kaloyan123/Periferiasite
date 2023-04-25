@@ -1,0 +1,29 @@
+﻿body {
+    background-color: black;
+}
+
+.center {
+    border: 2px solid black;
+    padding: 0px;
+}
+
+.imgdisplay {
+    display: flex;
+}
+
+.imgcolumn {
+    flex: 33.33%;
+    padding: 30px;
+}
+
+.centerimg {
+    width: 100%
+}
+
+.centertxt {
+    text-align: center;
+}
+
+.buttoncolumn {
+    flex: 33.33%;
+}

@@ -1,0 +1,97 @@
+﻿.hidden {
+    display: none;
+}
+
+.butonspace {
+    padding: 20px;
+}
+
+.itemspace {
+    margin: 10px;
+}
+
+.btnSecondary {
+    color: #fff;
+    background-color: #1861ac;
+    border-color: #1861ac;
+}
+
+.periferenB {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.periferenB:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.spasing {
+    white-space: pre-wrap;
+}
+
+.pagespace{
+    margin:5px;
+}
+
+.treadwrapper {
+    border: 2px groove gray;
+    padding: 5px;
+    margin-top: 10px;
+}
+.allcommentwrapper {
+    padding: 10px;
+}
+.commentwrapper {
+    border: 1px groove gray;
+    padding: 5px;
+    margin-top: 10px;
+}
+.namesaparator {
+    border-bottom: 1px groove black;
+}
+.contentwrapper {
+    margin-bottom: 5px;
+}
+.squishedtext{
+    margin:0;
+}
+.spasedtext {
+    white-space: pre-wrap;
+    padding: 5px;
+}
+
+
+.tablitsa{
+    margin-bottom: 1rem;
+    color: #212529;
+}
+.tablitsa th,
+.tablitsa td {
+   // padding: 0;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+.tablitsaslot {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.tablitsacenterslot {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+.heading{
+    margin: 20px;
+}
+
+.fronttext {
+    font-size: 14px;
+}

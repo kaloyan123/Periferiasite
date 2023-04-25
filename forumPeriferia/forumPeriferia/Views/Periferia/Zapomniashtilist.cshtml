@@ -1,0 +1,25 @@
+﻿@model List<PerifernaChast>
+
+<div class="pagespace">
+
+    @if (User.Identity.Name == "kaloyan.kirchev@gmail.com")
+    {
+    <div class="butonspace">
+        <a asp-area="" asp-controller="Periferia" asp-action="AddPeriferia">
+            <button type="button" class="btnSecondary">Добави нова част</button>
+        </a>
+    </div>
+    }
+
+
+    @foreach (var chast in Model)
+    {
+    @if (chast.Type == "zapomniashti")
+    {
+    <div class="itemspace">
+        <a asp-action="Preview" asp-route-id="@chast.Id">@chast.Name</a>
+    </div>
+    }
+
+    }
+</div>

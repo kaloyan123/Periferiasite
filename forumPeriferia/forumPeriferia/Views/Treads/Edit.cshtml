@@ -1,0 +1,31 @@
+﻿@model Tread
+
+<div class="pagespace">
+
+    <h1>Промeняне на дискусията</h1>
+
+    <form asp-action="Edit">
+        <div class="hidden">
+            <input type="text" class="form-control" placeholder="Enter Content" name="Id" value="@Model.Id">
+        </div>
+
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter Content" name="Name" value="@Model.Name" disabled>
+        </div>
+
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter Content" name="Topic" value="@Model.Topic" disabled>
+        </div>
+
+        <div class="form-group">
+            <textarea type="text" class="form-control" placeholder="Enter Content" name="Content" rows="15" cols="50">@Model.Content</textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Промени</button>
+    </form>
+
+
+    <a asp-action="Preview" asp-route-id="@Model.Id">
+        <button type="button" class="btn btn-secondary">Назад</button>
+    </a>
+</div>

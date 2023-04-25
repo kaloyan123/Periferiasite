@@ -1,0 +1,27 @@
+﻿@model Comment
+
+<div class="pagespace">
+
+    <h1>Промeняне на отговор</h1>
+
+    <form asp-action="EditComment">
+        <div class="hidden">
+            <input type="text" class="form-control" placeholder="Enter Content" name="Id" value="@Model.Id">
+        </div>
+
+        <div class="hidden">
+            <input type="text" class="form-control" placeholder="Enter Content" name="TreadID" value="@Model.TreadID">
+        </div>
+
+        <div class="form-group">
+            <textarea type="text" class="form-control" placeholder="Enter Content" name="Content" rows="15" cols="50">@Model.Content</textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Промени</button>
+    </form>
+
+
+    <a asp-action="Preview" asp-route-id="@Model.TreadID">
+        <button type="button" class="btn btn-secondary">Назад</button>
+    </a>
+</div>

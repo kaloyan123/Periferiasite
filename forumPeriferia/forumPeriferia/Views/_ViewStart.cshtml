@@ -1,0 +1,42 @@
+﻿@{
+    Layout = "_Layout";
+}
+<div class="center">
+    <div class="imgdisplay">
+        <div class="imgcolumn">
+            <img src="~/images/klaviatura.jpg" class="centerimg">
+        </div>
+        <div class="imgcolumn">
+            <img src="~/images/mishka.jpg" class="centerimg">
+        </div>
+        <div class="imgcolumn">
+            <img src="~/images/printer.jpeg" class="centerimg">
+        </div>
+        <div class="imgcolumn">
+            <img src="~/images/skener.jpg" class="centerimg">
+        </div>
+        <div class="imgcolumn">
+            <img src="~/images/modem.jpg" class="centerimg">
+        </div>
+    </div>
+    <h1 class="centertxt">Компютърна периферия</h1>
+</div>
+
+<ul class="buttonnav">
+    <li class="buttonnavbutn">
+        <a class="periferenA" type="button" asp-area="" asp-controller="Periferia" asp-action="Vhodnilist">
+            <b>  Входни периферни устройства </b>
+        </a>
+    </li>
+    <li class="buttonnavbutn">
+        <a class="periferenA" type="button" asp-area="" asp-controller="Periferia" asp-action="Ishodnilist">
+            <b>Изходни периферни устройства </b>
+        </a>
+    </li>
+    <li class="">
+        <a class="periferenA" type="button" asp-area="" asp-controller="Periferia" asp-action="Vhodnoishodnilist">
+            <b> Входно-Изходни периферни устройства </b>
+        </a>
+    </li>
+    
+</ul>
